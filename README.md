@@ -4,6 +4,11 @@ This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
 
+## Starting kafka
+1. Start zookeeper: `$ bin/zookeeper-server-start.sh config/zookeeper.properties`
+2. Start server: `$ bin/kafka-server-start.sh config/server.properties`
+3. Create topic: `$ bin/kafka-topics.sh --create --topic kogito-processinstances-events --bootstrap-server localhost:9092`
+
 ## Running the application in dev mode
 
 You can run your application in dev mode that enables live coding using:
